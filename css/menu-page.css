@@ -1,0 +1,129 @@
+/* Styles spécifiques pour la page de menu complète */
+
+.menu-page {
+    padding-top: 120px;
+    background-color: var(--light-color);
+}
+
+.menu-page .container {
+    max-width: 1000px;
+}
+
+.menu-section {
+    margin-bottom: 60px;
+}
+
+.menu-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.menu-section-title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-list {
+    list-style: none;
+}
+
+.menu-item-full {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.menu-item-info {
+    flex: 1;
+}
+
+.menu-item-name {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+}
+
+.menu-item-desc {
+    color: #666;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.menu-item-price {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-left: 20px;
+}
+
+.menu-category {
+    background-color: var(--primary-color);
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.delivery-info {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.delivery-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.delivery-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.delivery-detail {
+    flex-basis: 48%;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.delivery-detail i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-item-full {
+        flex-direction: column;
+    }
+    
+    .menu-item-price {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    
+    .delivery-detail {
+        flex-basis: 100%;
+    }
+}
